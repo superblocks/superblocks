@@ -21,3 +21,17 @@ Coins that seed with the Previous Block Hash:
 
 Coins that seed with Current Block Hash:
 * ?
+
+Donate? Donate!
+BTC:
+DMD:
+ELP:
+GDC:
+GIL:
+JNK:
+LKY:
+NUG:
+PHS:
+SPT:
+STR:
+SXC:

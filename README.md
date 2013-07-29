@@ -18,3 +18,6 @@ Coins that seed with the Previous Block Hash:
 * PHS - Philosopherstone - https://github.com/philosopherstonecoin/philosopherstone
 * SPT - Spots - https://github.com/spots-project/spots
 * STR - Starcoin - https://github.com/starcoinproject/starcoin
+
+Coins that seed with Current Block Hash:
+* ?

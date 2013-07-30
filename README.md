@@ -1,4 +1,4 @@
-superblocks
+Superblocks
 ===========
 
 Scripts to predict upcoming superblocks from various cryptocurrencies
@@ -33,14 +33,15 @@ Donate? More Code? Donate! More Fun!
 * BTC: 16SUC5BXqRrLJc4X8FY8DA1hRyMexDvjfZ
 * LTC: LQfRTHVMv66PZQkgJPXRVB5TeBiw52eKtZ
 * NMC: N21qPigWkowtq9K2Q4rhRgAcACkhvgvdRw
-* DMD:
-* ELP:
-* GDC:
-* GIL:
+* DMD: dJrkor1TjfZBuccKL1WorSWW5NYYucYQkA
+* ELP: e7Xxn4c3A2UwYUtVNrBSph45LP4SLCSf1w
+* GDC: g8Dyhc6UhvoKdeavVwr3FKR1UuM9tm4cfW
+* GIL: 78WWxherV8oUa79pVYXuV36VsYDobxJTU7  
 * JNK: 7Xr7wox9CKGMPYHuWxsDyANHW3UkMgViUm
 * LKY: L1KpUBC5CudWjycbGyC713og1gTzP4o9qi
 * NUG: NRMSNpyoTzQmeaT7RVC1uoSPni1ebEV99m
-* PHS:
-* SPT:
-* STR:
+* PHS: 9YY8sMSakDajUhzLe4XpPnjDeZmTt5iXMV
+* SPT: MDLdRW5wLT29CH2rMEC4TRd2uCEpScjNZE
+* STR: sPgsGeSYaymrXnVMBhAxpq3372ZZriJ6Gs
 * SXC: S3PsEofPrcaf1UhteGBtGvtUTFL93CEYqm  
+* Hash160: 3BA9B9CCDFF4B1CC65AB2E9D095A8C6EB9E1E09F

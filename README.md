@@ -7,7 +7,7 @@ Files:
 
 * gil.variable.cpp - predict reward of next gil block
 * gil.variableblocks.test.txt - test for gil variable block
-* 
+
 * junkcoin.superblocks.cpp - generate list of junkcoin superblocks
 * junkcoin.superblocks.test.txt - list of junkcoin superblocks up to block 100,000
 

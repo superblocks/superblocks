@@ -13,7 +13,7 @@ Files:
 
 * nuggets.superblocks.cpp - predict if next nuggets block is a superblock
 
-* sexcoin.superblocks.cpp - generate list of junkcoin superblocks
+* sexcoin.superblocks.cpp - generate list of sexcoin superblocks
 * sexcoin.superblocks.test.txt - list of sexcoin superblocks up to block 100,000
 
 Coins

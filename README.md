@@ -5,7 +5,7 @@ Scripts to predict upcoming superblocks and upcoming variable blocks for various
 
 Files:
 
-* gil.variable.cpp - predict reward of next gil block
+* gil.variableblocks.cpp - predict reward of next gil block
 * gil.variableblocks.test.txt - test for gil variable block
 
 * junkcoin.superblocks.cpp - generate list of junkcoin superblocks

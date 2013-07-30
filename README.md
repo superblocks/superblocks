@@ -1,10 +1,13 @@
-Superblocks
-===========
+Superblocks 0.2
+===============
 
-Scripts to predict upcoming superblocks and upcoming variable blocks from various cryptocurrencies
+Scripts to predict upcoming superblocks and upcoming variable blocks for various cryptocurrencies
 
 Files:
 
+* gil.variable.cpp - predict reward of next gil block
+* gil.variableblocks.test.txt - test for gil variable block
+* 
 * junkcoin.superblocks.cpp - generate list of junkcoin superblocks
 * junkcoin.superblocks.test.txt - list of junkcoin superblocks up to block 100,000
 
@@ -27,7 +30,7 @@ Coins that seed with the Previous Block Hash:
 * DMD - DiamondCoin - https://github.com/diamondcoinproject/diamondcoin
 * ELP - ElephantCoin - https://github.com/elephantcoin/elephantcoin
 * GDC - Grandcoin - https://github.com/grandcoin/grandcoin
-* GIL - Gil - https://github.com/hydroponica/gil  (variable)
+* GIL - Gil (variable) - https://github.com/hydroponica/gil  
 * LKY - Luckycoin - https://github.com/LuckyCoinProject/Luckycoin
 * NUG - Nuggets - https://bitbucket.org/mytwobits/nuggets
 * PHS - Philosopherstone - https://github.com/philosopherstonecoin/philosopherstone
@@ -59,3 +62,27 @@ Donate? More Code? Donate! More Fun!
 * STR: sPgsGeSYaymrXnVMBhAxpq3372ZZriJ6Gs
 * SXC: S3PsEofPrcaf1UhteGBtGvtUTFL93CEYqm  
 * Hash160: 3BA9B9CCDFF4B1CC65AB2E9D095A8C6EB9E1E09F
+
+
+Open Source
+===========
+
+Copyright (c) 2013 Superblock Developers
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

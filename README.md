@@ -3,6 +3,18 @@ Superblocks
 
 Scripts to predict upcoming superblocks from various cryptocurrencies
 
+Files:
+
+* junkcoin.superblocks.cpp - generate list of junkcoin superblocks
+* junkcoin.superblocks.test.txt - list of junkcoin superblocks up to block 100,000
+
+* luckycoin.superblocks.cpp - predict if next luckycoin block is a superblock
+* luckycoin.superblocks.test.txt - test for luckycoin superblock
+
+* nuggets.superblocks.cpp - predict if next nuggets block is a superblock
+
+* sexcoin.superblocks.cpp - generate list of junkcoin superblocks
+* sexcoin.superblocks.test.txt - list of sexcoin superblocks up to block 100,000
 
 Coins
 =====

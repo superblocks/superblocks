@@ -1,7 +1,7 @@
 Superblocks
 ===========
 
-Scripts to predict upcoming superblocks from various cryptocurrencies
+Scripts to predict upcoming superblocks and upcoming variable blocks from various cryptocurrencies
 
 Files:
 
@@ -27,10 +27,11 @@ Coins that seed with the Previous Block Hash:
 * DMD - DiamondCoin - https://github.com/diamondcoinproject/diamondcoin
 * ELP - ElephantCoin - https://github.com/elephantcoin/elephantcoin
 * GDC - Grandcoin - https://github.com/grandcoin/grandcoin
-* GIL - Gil - https://github.com/hydroponica/gil
+* GIL - Gil - https://github.com/hydroponica/gil  (variable)
 * LKY - Luckycoin - https://github.com/LuckyCoinProject/Luckycoin
 * NUG - Nuggets - https://bitbucket.org/mytwobits/nuggets
 * PHS - Philosopherstone - https://github.com/philosopherstonecoin/philosopherstone
+* RED - Redcoin - https://github.com/redcoinproject/redcoin/
 * SPT - Spots - https://github.com/spots-project/spots
 * STR - Starcoin - https://github.com/starcoinproject/starcoin
 
@@ -53,6 +54,7 @@ Donate? More Code? Donate! More Fun!
 * LKY: L1KpUBC5CudWjycbGyC713og1gTzP4o9qi
 * NUG: NRMSNpyoTzQmeaT7RVC1uoSPni1ebEV99m
 * PHS: 9YY8sMSakDajUhzLe4XpPnjDeZmTt5iXMV
+* RED: Re4GFhN79S7nC3ZocqrZnocgpk5CJ5nf3E
 * SPT: MDLdRW5wLT29CH2rMEC4TRd2uCEpScjNZE
 * STR: sPgsGeSYaymrXnVMBhAxpq3372ZZriJ6Gs
 * SXC: S3PsEofPrcaf1UhteGBtGvtUTFL93CEYqm  

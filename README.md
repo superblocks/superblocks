@@ -14,9 +14,9 @@ Files:
 * luckycoin.superblocks.cpp - predict if next luckycoin block is a superblock
 * luckycoin.superblocks.test.txt - test for luckycoin superblock
 
-* nuggets.superblocks.cpp - predict if next nuggets block is a superblock
+* nuggets.superblocks.cpp - predict reward of next nuggets block
 * nuggets.superblocks.test.txt - test for nuggets superblock
-* 
+
 * sexcoin.superblocks.cpp - generate list of sexcoin superblocks
 * sexcoin.superblocks.test.txt - list of sexcoin superblocks up to block 100,000
 

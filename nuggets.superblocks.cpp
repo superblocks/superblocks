@@ -1,5 +1,13 @@
-// NUG superblocks
+//
+// Predict next block reward for:
+// Nuggets (NUG) - normal reward: 49 - superblock: 10045 - repo: https://bitbucket.org/mytwobits/nuggets/
+//
+// Version 0.3
+//
+// superblock test:  ./nug 86b707fad8477ce7c30bcfdf90e4371bc45751bf76f4b3c3253e3d16a7cc4be3 debug
+//
 #include <stdio.h>
+#include <string.h>
 #include <string>
 #include <boost/random/mersenne_twister.hpp>
 #include <boost/random/uniform_int_distribution.hpp>
@@ -8,16 +16,41 @@ using namespace boost;
 
 int main( int argc, char **argv ) {
 
+        std::string altcoin("NUG");
+
+        int debug = 0;
+        int hash_len = 64;
+
+        int substr_start = 55;
+        int substr_len = 7;
+
+        int rnd_low = 1;
+        int rnd_high = 1000000;
+        int rnd_lucky = 9723;
+
+        int reward_normal = 49;
+        int reward_superblock = 10045;
+
+        std::string assuming("nHeight > 6678 && nHeight <= 14726880");
+
+        //////////////////////////////////////
+
+        if( !argv[1] ) { printf("error: missing hash for previous %s block\n", altcoin.c_str()); return 0; }
+        if( argv[2] ) { debug = 1; }
+
+        if( debug ) { printf("Predicting next %s block reward:\n", altcoin.c_str()); }
+        if( debug ) { printf("Assuming: %s\n", assuming.c_str()); }
+
         const char* prevHash = argv[1];
-        printf("prevHash: %s\n", prevHash);
+        int phlen = strlen(prevHash);
+        if( phlen != hash_len ) { printf("error: hash length not %d\n", hash_len); return 0; }
+        if( debug ) { printf("prevHash: %s\n", prevHash); }
 
-        string prevHash_string(argv[1]);
-
-        std::string cseed_str = prevHash_string.substr(55,7);
+        std::string prevHash_string(argv[1]);
+        std::string cseed_str = prevHash_string.substr( substr_start, substr_len);
         const char* cseed = cseed_str.c_str();
-        printf("cseed: %s\n", cseed);
+        if( debug ) { printf("cseed: %s\n", cseed); }
 
-//      long seed = hex2long(cseed);
         static const long hextable[] = {
         -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
         -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, // 10-19
@@ -52,21 +85,22 @@ int main( int argc, char **argv ) {
                 seed = (seed << 4) | hextable[*cseed++];
         }
 
-        printf("seed: %d\n", seed);
+        if( debug ) { printf("seed: %d\n", seed); }
 
-        // int rand = generateMTRandom(seed, 1000000);
         random::mt19937 gen(seed);
-        random::uniform_int_distribution<> dist(1, 1000000);
+        random::uniform_int_distribution<> dist(rnd_low, rnd_high);
         int rand = dist(gen);
-        printf("rand: %d\n", rand);
+        if( debug ) { printf("rand: %d\n", rand); }
 
-        int lucky = 9723;
-        printf("lucky: < %d\n", lucky);
-        if(rand < lucky) {
-                printf("Next Block: nSubsidy = 10045 * COIN\n");
-        } else {
-                printf("Next Block: normal\n");
-        }
+        int nSubsidy;
+
+        if( rand < rnd_lucky )
+                nSubsidy = reward_superblock;
+        else
+                nSubsidy = reward_normal;
+
+        if( debug ) { printf("Next %s Block Reward: ", altcoin.c_str()); }
+        printf("%d", nSubsidy);
 
         return 0;
 }

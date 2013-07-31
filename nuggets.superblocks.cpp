@@ -71,7 +71,7 @@ int main( int argc, char **argv ) {
         int reward_normal = 49;
         int reward_superblock = 10045;
 
-        std::string assuming("nHeight > 6678 && nHeight <= 14726880");
+        std::string assuming("nHeight > 6677 && nHeight <= 14726880");
 
         //////////////////////////////////////
 

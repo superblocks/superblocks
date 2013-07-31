@@ -1,4 +1,4 @@
-Superblocks 0.2
+Superblocks 0.3
 ===============
 
 Scripts to predict upcoming superblocks and upcoming variable blocks for various cryptocurrencies
@@ -15,7 +15,8 @@ Files:
 * luckycoin.superblocks.test.txt - test for luckycoin superblock
 
 * nuggets.superblocks.cpp - predict if next nuggets block is a superblock
-
+* nuggets.superblocks.test.txt - test for nuggets superblock
+* 
 * sexcoin.superblocks.cpp - generate list of sexcoin superblocks
 * sexcoin.superblocks.test.txt - list of sexcoin superblocks up to block 100,000
 

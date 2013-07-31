@@ -1,6 +1,6 @@
 $ ./nug 86b707fad8477ce7c30bcfdf90e4371bc45751bf76f4b3c3253e3d16a7cc4be3 debug
 Predicting next NUG block reward:
-Assuming: nHeight > 6678 && nHeight <= 14726880
+Assuming: nHeight > 6677 && nHeight <= 14726880
 prevHash: 86b707fad8477ce7c30bcfdf90e4371bc45751bf76f4b3c3253e3d16a7cc4be3
 cseed: 6a7cc4b
 seed: 111660107

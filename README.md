@@ -30,7 +30,7 @@ Coins that seed with Block Height:
 * SXC - Sexcoin - https://github.com/sexcoin-project/sexcoin
 
 Coins that seed with the Previous Block Hash:
-* CDC - Cloudcin - (no repo)
+* CDC - Cloudcoin - (no repo)
 * DMD - DiamondCoin - https://github.com/diamondcoinproject/diamondcoin
 * ELP - ElephantCoin - https://github.com/elephantcoin/elephantcoin
 * GDC - Grandcoin - https://github.com/grandcoin/grandcoin
@@ -42,7 +42,7 @@ Coins that seed with the Previous Block Hash:
 * SPT - Spots - https://github.com/spots-project/spots
 * STR - Starcoin - https://github.com/starcoinproject/starcoin
 
-Coins that seed with Current Block Hash:
+Coins that seed with Current Block Hash, Nonce, Block Time, or other:
 * ?
 
 Donate
@@ -53,6 +53,7 @@ Donate? More Code? Donate! More Fun!
 * BTC: 16SUC5BXqRrLJc4X8FY8DA1hRyMexDvjfZ
 * LTC: LQfRTHVMv66PZQkgJPXRVB5TeBiw52eKtZ
 * NMC: N21qPigWkowtq9K2Q4rhRgAcACkhvgvdRw
+* CDC: BxZkn1EK1JMzPJprnaXjJYMwRbK86gPeeG
 * DMD: dJrkor1TjfZBuccKL1WorSWW5NYYucYQkA
 * ELP: e7Xxn4c3A2UwYUtVNrBSph45LP4SLCSf1w
 * GDC: g8Dyhc6UhvoKdeavVwr3FKR1UuM9tm4cfW

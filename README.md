@@ -20,7 +20,7 @@ Files:
 * sexcoin.superblocks.cpp - generate list of sexcoin superblocks
 * sexcoin.superblocks.test.txt - list of sexcoin superblocks up to block 100,000
 
-* spots.superblocks.cpp - predict reward of next nuggets block
+* spots.superblocks.cpp - predict reward of next spots block
 
 Coins
 =====

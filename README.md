@@ -20,6 +20,8 @@ Files:
 * sexcoin.superblocks.cpp - generate list of sexcoin superblocks
 * sexcoin.superblocks.test.txt - list of sexcoin superblocks up to block 100,000
 
+* spots.superblocks.cpp - predict reward of next nuggets block
+
 Coins
 =====
 
@@ -28,6 +30,7 @@ Coins that seed with Block Height:
 * SXC - Sexcoin - https://github.com/sexcoin-project/sexcoin
 
 Coins that seed with the Previous Block Hash:
+* CDC - Cloudcin - (no repo)
 * DMD - DiamondCoin - https://github.com/diamondcoinproject/diamondcoin
 * ELP - ElephantCoin - https://github.com/elephantcoin/elephantcoin
 * GDC - Grandcoin - https://github.com/grandcoin/grandcoin

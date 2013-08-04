@@ -1,40 +1,49 @@
-Superblocks 0.3
+Superblocks 0.4
 ===============
 
-Scripts to predict upcoming superblocks and upcoming variable blocks for various cryptocurrencies
+A collection of programs to determine the Next Block Reward for
+cryptocurrencies with superblocks and/or variable reward blocks.
 
 Files:
 
-* gil.variableblocks.cpp - predict reward of next gil block
-* gil.variableblocks.test.txt - test for gil variable block
+README.md - This file!
+TODO - To do list for Superblocks project
 
-* junkcoin.superblocks.cpp - generate list of junkcoin superblocks
-* junkcoin.superblocks.test.txt - list of junkcoin superblocks up to block 100,000
+makefile - Makefile to create all these fun little programs
 
-* luckycoin.superblocks.cpp - predict if next luckycoin block is a superblock
-* luckycoin.superblocks.test.txt - test for luckycoin superblock
+test-next.sh - Test script to test these fun little programs
 
-* nuggets.superblocks.cpp - predict reward of next nuggets block
-* nuggets.superblocks.test.txt - test for nuggets superblock
+superblocks.cpp - main controller for Get Next Block Reward 
+superblocks.hpp - includes and Superblocks class
+utils.cpp - Mersenne Twister random, hex2long
 
-* sexcoin.superblocks.cpp - generate list of sexcoin superblocks
-* sexcoin.superblocks.test.txt - list of sexcoin superblocks up to block 100,000
+next-gil.cpp - Get Next Block Reward for [GIL] Gil
+next-lky.cpp - Get Next Block Reward for [LKY] Luckycoin
+next-nug.cpp - Get Next Block Reward for [NUG] Nuggets
+next-spt.cpp - Get Next Block Reward for [SPT] Spots
 
-* spots.superblocks.cpp - predict reward of next spots block
+list-jkc.cpp - Generate list of all superblocks for [JKC] Junkcoin
+list-sxc.cpp - Generate list of all superblocks for [SXC] Sexcoin
+rewardlists/rewardlist.jkc.txt - List of JKC superblocks up to block 100,000
+rewardlists/rewardlist.sxc.txt - List of SXC superblocks up to block 100,000
+
+precom-nug.cpp - Precompute lucky hash cut outs for [NUG] Nuggets
+precom-spt.cpp - Precompute lucky hash cut outs for [SPT] Spots
+
 
 Coins
 =====
 
-Coins that seed with Block Height:
+Superblock Coins that seed with Block Height:
 * JNK - Junkcoin - https://github.com/Hartland/JKC
 * SXC - Sexcoin - https://github.com/sexcoin-project/sexcoin
 
-Coins that seed with the Previous Block Hash:
+Superblock Coins that seed with the Previous Block Hash:
 * CDC - Cloudcoin - (no repo)
 * DMD - DiamondCoin - https://github.com/diamondcoinproject/diamondcoin
 * ELP - ElephantCoin - https://github.com/elephantcoin/elephantcoin
 * GDC - Grandcoin - https://github.com/grandcoin/grandcoin
-* GIL - Gil (variable) - https://github.com/hydroponica/gil  
+* GRW - Growthcoin - https://github.com/growthcoinproject/growthcoin
 * LKY - Luckycoin - https://github.com/LuckyCoinProject/Luckycoin
 * NUG - Nuggets - https://bitbucket.org/mytwobits/nuggets
 * PHS - Philosopherstone - https://github.com/philosopherstonecoin/philosopherstone
@@ -42,7 +51,10 @@ Coins that seed with the Previous Block Hash:
 * SPT - Spots - https://github.com/spots-project/spots
 * STR - Starcoin - https://github.com/starcoinproject/starcoin
 
-Coins that seed with Current Block Hash, Nonce, Block Time, or other:
+Variable Reward Coins that seed with the Previous Block Hash:
+* GIL - Gil (variable) - https://github.com/hydroponica/gil  
+
+Coins that seed with Current Block Hash, or other methods:
 * ?
 
 Donate
@@ -58,6 +70,7 @@ Donate? More Code? Donate! More Fun!
 * ELP: e7Xxn4c3A2UwYUtVNrBSph45LP4SLCSf1w
 * GDC: g8Dyhc6UhvoKdeavVwr3FKR1UuM9tm4cfW
 * GIL: 78WWxherV8oUa79pVYXuV36VsYDobxJTU7  
+* GRW: GPHPcCWUpHTdP5Mp4CCEdvMbM99VzBvNe6
 * JNK: 7Xr7wox9CKGMPYHuWxsDyANHW3UkMgViUm
 * LKY: L1KpUBC5CudWjycbGyC713og1gTzP4o9qi
 * NUG: NRMSNpyoTzQmeaT7RVC1uoSPni1ebEV99m
@@ -91,3 +104,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+

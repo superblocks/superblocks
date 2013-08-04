@@ -1,15 +1,17 @@
-Superblocks TODO:
+TODO:
+Superblocks - Version 0.4.2
 
-* getnextreward block for: CDC
-* getnextreward block for: DMD
-* getnextreward block for: ELP
-* getnextreward block for: GDC
-* getnextreward block for: GIL
-* getnextreward block for: PHS
-* getnextreward block for: RED
-* getnextreward block for: STR
-* getnextreward block for: JNK
-* getnextreward block for: SXC
+* full test for: getnextblockreward for: ELP
+
+* getnextblockreward for: CDC
+* getnextblockreward for: DMD
+* getnextblockreward for: GDC
+* getnextblockreward for: GIL
+* getnextblockreward for: PHS
+* getnextblockreward for: RED (+ secondary rand)
+* getnextblockreward for: STR
+* getnextblockreward for: JNK (+ getblockreward <height>)
+* getnextblockreward for: SXC (+ getblockreward <height>)
 
 * precompute lucky hash cut outs for: CDC
 * precompute lucky hash cut outs for: DMD

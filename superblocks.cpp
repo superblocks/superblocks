@@ -1,12 +1,12 @@
 // superblocks.cpp 
-// Superblocks - Version 0.4
+// Superblocks - Version 0.4.2
 
 #include "superblocks.hpp" 
 
 int Superblocks::getnextblockreward( const char* hash )
 {
 
-  int hlen = strlen(hash);
+	int hlen = strlen(hash);
 	if( debug ) { 
 			cout << "-------------------" << endl; 
 			cout << "getnextblockreward" << endl; 
@@ -65,6 +65,9 @@ int Superblocks::getnextblockreward( const char* hash )
 					if( debug ) { cout << "luck_x: " << luck_x[rstep] << endl; }
 					if( rand < luck_x[rstep] ) {
 						nextreward = reward[rstep];
+						if( secondary_rand[rstep] == 1 ) { 
+							nextreward = getsecondaryreward( rand, rstep );
+						}
 						goto final_reward;
 					}
 					break;
@@ -73,7 +76,7 @@ int Superblocks::getnextblockreward( const char* hash )
 
 					cout << "TODO luck type 2 MORE THAN X" << endl; 
 					if( debug ) { cout << "luck_x: " << luck_x[rstep] << endl; }
-					return 0; 
+					return 0;
 
 				case 3: // LUCK_WITH_MORE_THAN_X_AND_LESS_THAN_Y
 
@@ -81,6 +84,9 @@ int Superblocks::getnextblockreward( const char* hash )
 					if( debug ) { cout << "luck_y: " << luck_y[rstep] << endl; }
 					if( rand > luck_x[rstep] && rand < luck_y[rstep] ) {
 						nextreward = reward[rstep];
+					if( secondary_rand[rstep] == 1 ) {
+							nextreward = getsecondaryreward( rand, rstep );
+						}
 						goto final_reward;
 					}
 					break;
@@ -91,6 +97,36 @@ int Superblocks::getnextblockreward( const char* hash )
 		return nextreward;
 	}
 
+int Superblocks::getsecondaryreward( int seed, int step ) 
+{
+	if( debug ) { 
+		cout << "getsecondaryreward: seed: " << seed << endl; 
+		cout << "getsecondaryreward: step: " << step << endl; 
+		cout << "getsecondaryreward: reward: " << reward[step] << endl;
+		cout << "getsecondaryreward: secondary_rand_high: " << secondary_rand_high[step] << endl; 
+		cout << "getsecondaryreward: secondary_rand_type: " 
+			<< getsecondarylucktype( secondary_rand_type[step] ) << endl; 
+	}
+
+	int rand1 = Superblocks::generateMTRandom(seed, secondary_rand_high[step]);
+
+	int secondary_reward;
+
+	switch( secondary_rand_type[step] ) {
+		case 1: // SECONDARY_REWARD_PLUS_RAND_MINUS_X 
+			secondary_reward = ( reward[step] + rand1 - 1 );
+			break;
+		default: 
+			cout << "unknown secondary_rand_type!" << endl;
+			return 0;
+	}
+
+	if( debug ) {
+		cout << "getsecondaryreward: rand1: " << rand1 << endl; 
+		cout << "getsecondaryreward: secondary_reward: " << secondary_reward << endl; 
+	}
+	return secondary_reward;
+}
 
 int main( int argc, char **argv ) 
 {
@@ -98,7 +134,7 @@ int main( int argc, char **argv )
 	Superblocks s;
 	s.init();	
 
-        if( !argv[1] ) 
+	if( !argv[1] ) 
 	{
 		cout << "usage: " << argv[0];
 		switch( s.seed_type[1] ) { 
@@ -119,7 +155,6 @@ int main( int argc, char **argv )
 		cout << "coin: " << s.coin << endl;
 		cout << "coin_name: " << s.coin_name << endl;
 
-		// cout << "debug: " << s.debug << endl;
 		cout << "hash_length: " << s.hash_length << endl;
 
 		cout << "LUCK_STEPS: " << LUCK_STEPS << endl;
@@ -133,33 +168,17 @@ int main( int argc, char **argv )
 				continue;
 			} 
 
+			cout << "seed_type: " << s.getseedtype( s.seed_type[step] ) << endl;
 
-			//cout << "cutout_start: " << s.cutout_start[step] << endl;
-			//cout << "cutout_length: " << s.cutout_length[step] << endl;
-		
-			//cout << "rnd_range_low: " << s.rnd_range_low[step] << endl;
-			//cout << "rnd_range_high: " << s.rnd_range_high[step] << endl;
-
-			cout << "seed_type: ";
-			switch( s.seed_type[step] ) {
-				default: cout << "error" << endl; break;
-				case 1: cout << "SEED_WITH_BLOCK_HEIGHT" << endl; break;
-				case 2: cout << "SEED_WITH_PREVIOUS_BLOCK_HASH" << endl; break;
-			}
-
-			cout << "luck_type: ";
+			cout << "luck_type: " << s.getlucktype( s.luck_type[step] ) << endl;
 			switch( s.luck_type[step] ) {
-				default: cout << "error" << endl; break;
-				case 1: 
-					cout << "LUCK_WITH_LESS_THAN_X" << endl; 
+				case 1: // "LUCK_WITH_LESS_THAN_X" 
 					cout << "luck_x: " << s.luck_x[step] << endl;
 					break; 
-				case 2: 
-					cout << "LUCK_WITH_MORE_THAN_X" << endl; 
+				case 2: // "LUCK_WITH_MORE_THAN_X" 
 					cout << "luck_x: " << s.luck_x[step] << endl;
 					break;
-				case 3: 
-					cout << "LUCK_WITH_MORE_THAN_X_AND_LESS_THAN_Y" << endl; 
+				case 3: // "LUCK_WITH_MORE_THAN_X_AND_LESS_THAN_Y" 
 					cout << "luck_x: " << s.luck_x[step] << endl;
 					cout << "luck_y: " << s.luck_y[step] << endl;
 					break;
@@ -175,3 +194,4 @@ int main( int argc, char **argv )
 	return 0;
 
 }
+

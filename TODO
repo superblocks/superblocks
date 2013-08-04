@@ -1,0 +1,22 @@
+Superblocks TODO:
+
+* getnextreward block for: CDC
+* getnextreward block for: DMD
+* getnextreward block for: ELP
+* getnextreward block for: GDC
+* getnextreward block for: GIL
+* getnextreward block for: PHS
+* getnextreward block for: RED
+* getnextreward block for: STR
+* getnextreward block for: JNK
+* getnextreward block for: SXC
+
+* precompute lucky hash cut outs for: CDC
+* precompute lucky hash cut outs for: DMD
+* precompute lucky hash cut outs for: ELP
+* precompute lucky hash cut outs for: GDC
+* precompute lucky hash cut outs for: GIL
+* precompute lucky hash cut outs for: PHS
+* precompute lucky hash cut outs for: RED
+* precompute lucky hash cut outs for: STR
+

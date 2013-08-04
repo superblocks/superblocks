@@ -1,5 +1,5 @@
 // superblocks.hpp 
-// Superblocks - Version 0.4
+// Superblocks - Version 0.4.2
 
 #include <iostream>
 #include <string>
@@ -18,6 +18,9 @@ using namespace boost;
 #define LUCK_WITH_LESS_THAN_X 1
 #define LUCK_WITH_MORE_THAN_X 2
 #define LUCK_WITH_MORE_THAN_X_AND_LESS_THAN_Y 3
+
+// Secondary Luck Types:
+#define SECONDARY_REWARD_PLUS_RAND_MINUS_X 1
 
 class Superblocks {
 
@@ -38,6 +41,12 @@ class Superblocks {
     int rnd_range_low[LUCK_STEPS];
     int rnd_range_high[LUCK_STEPS];
 
+    int secondary_rand[LUCK_STEPS]; // do secondary rand step?
+    int secondary_rand_type[LUCK_STEPS]; 
+    int secondary_rand_low[LUCK_STEPS];
+    int secondary_rand_high[LUCK_STEPS];
+    int secondary_rand_x[LUCK_STEPS];
+
     int luck_type[LUCK_STEPS];
 
     int luck_x[LUCK_STEPS];
@@ -47,12 +56,39 @@ class Superblocks {
 
     void init();
 
-    int getnextblockreward( const char* hash );
+    int getnextblockreward( const char* hash ); // in superblocks.cpp
 
-    int static generateMTRandom(unsigned int s, int range);
+    int getsecondaryreward( int seed, int step ); // in superblocks.cpp
 
-    long hex2long(const char* hexString);
+    int static generateMTRandom(unsigned int s, int range); // in utils.cpp
 
+    long hex2long(const char* hexString); // in utils.cpp
+
+
+  string getseedtype( int type ) 
+	{
+		switch( type ) {
+			case 1: return "SEED_WITH_BLOCK_HEIGHT";
+			case 2: return "SEED_WITH_PREVIOUS_BLOCK_HASH";
+			default: return "error";
+		}	
+	}
+	string getlucktype( int type ) 
+	{
+		switch( type ) {
+			case 1: return "LUCK_WITH_LESS_THAN_X";
+			case 2: return "LUCK_WITH_MORE_THAN_X";
+			case 3: return "LUCK_WITH_MORE_THAN_X_AND_LESS_THAN_Y";
+			default: return "error";
+		}
+	}
+	string getsecondarylucktype( int type ) 
+	{
+		switch( type ) {
+			case 1: return "SECONDARY_REWARD_PLUS_RAND_MINUS_X";
+			default: return "error";
+		}
+	}
 
 };
 

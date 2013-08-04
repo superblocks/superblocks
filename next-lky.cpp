@@ -1,11 +1,11 @@
 // Get Next Block Reward: [LKY] Luckycoin
-// Superblocks - Version 0.4
+// Superblocks - Version 0.4.2
 
 #include "superblocks.hpp" 
 
 void Superblocks::init() {
 
-  coin = "LKY"; 
+	coin = "LKY"; 
 	coin_name = "Luckycoin";
 
 	hash_length = 64;
@@ -22,19 +22,19 @@ void Superblocks::init() {
 	luck_type[1] = LUCK_WITH_MORE_THAN_X_AND_LESS_THAN_Y;
 	luck_x[1] = 30000;
 	luck_y[1] = 35001;
-	reward[1] = 88 * 2;
+	reward[1] = 176;
 
 	// superblock (step 2)
 	luck_type[2] = LUCK_WITH_MORE_THAN_X_AND_LESS_THAN_Y;
-        luck_x[2] = 70000;
-        luck_y[2] = 71001;
-        reward[2] = 88 * 5;
+	luck_x[2] = 70000;
+	luck_y[2] = 71001;
+	reward[2] = 440;
 
 	// superblock (step 3)
 	luck_type[3] = LUCK_WITH_MORE_THAN_X_AND_LESS_THAN_Y;
-        luck_x[3] = 50000;
-        luck_y[3] = 50011;
-        reward[3] = 88 * 58;
+	luck_x[3] = 50000;
+	luck_y[3] = 50011;
+	reward[3] = 5104;
 
 }
 

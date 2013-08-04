@@ -1,5 +1,5 @@
 # makefile 
-# Superblocks - version 0.4
+# Superblocks - Version 0.4.2
 
 CC=g++
 
@@ -10,30 +10,34 @@ BINDIR=./bin/
 #BINDIR=
 
 all:
-  # GIL - Gil - Get Next Block Reward
+	# Superblocks
+
+	# Get Next Block Reward - ELP - Elephantcoin
+	$(CC) $(FLAGS) -DLUCK_STEPS=4 superblocks.cpp utils.cpp next-elp.cpp -o $(BINDIR)getnextblockreward-elp
+
+	# Get Next Block Reward - GIL - Gil
 	$(CC) $(FLAGS) -DLUCK_STEPS=42 superblocks.cpp utils.cpp next-gil.cpp -o $(BINDIR)getnextblockreward-gil
 
-	# LKY - Luckycoin - Get Next Block Reward
+	# Get Next Block Reward - LKY - Luckycoin
 	$(CC) $(FLAGS) -DLUCK_STEPS=4 superblocks.cpp utils.cpp next-lky.cpp -o $(BINDIR)getnextblockreward-lky
 
-	# NUG - Nuggets - Get Next Block Reward
+	# Get Next Block Reward - NUG - Nuggets
 	$(CC) $(FLAGS) -DLUCK_STEPS=2 superblocks.cpp utils.cpp next-nug.cpp -o $(BINDIR)getnextblockreward-nug
 
-	# SPT - Spots - Get Next Block Reward
+	# Get Next Block Reward - SPT - Spots
 	$(CC) $(FLAGS) -DLUCK_STEPS=2 superblocks.cpp utils.cpp next-spt.cpp -o $(BINDIR)getnextblockreward-spt
 
 
-	# JKC - Junkcoin - Generate Reward List
+	# Generate Reward List - JKC - Junkcoin
 	$(CC) $(FLAGS) list-jkc.cpp -o $(BINDIR)rewardlist-jkc
 
-	# SXC - Sexcoin - Generate Reward List
+	# Generate Reward List - SXC - Sexcoin
 	$(CC) $(FLAGS) list-sxc.cpp -o $(BINDIR)rewardlist-sxc
 
 
-	# NUG - Nuggets - Precompute all lucky hash cutouts
+	# Precompute lucky hash cutouts - NUG - Nuggets
 	$(CC) $(FLAGS) precom-nug.cpp -o $(BINDIR)precompute-nug
 
-	# SPT - Nuggets - Precompute all lucky hash cutouts
+	# Precompute lucky hash cutouts - SPT - Nuggets
 	$(CC) $(FLAGS) precom-spt.cpp -o $(BINDIR)precompute-spt
-
 

@@ -1,11 +1,11 @@
 // Get Next Block Reward: [NUG] Nuggets
-// Superblocks - Version 0.4
+// Superblocks - Version 0.4.2
 
 #include "superblocks.hpp" 
 
 void Superblocks::init() {
 
-  coin = "NUG"; 
+	coin = "NUG"; 
 	coin_name = "Nuggets";
 
 	hash_length = 64;

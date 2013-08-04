@@ -27,7 +27,7 @@ all:
 	$(CC) $(FLAGS) list-jkc.cpp -o $(BINDIR)rewardlist-jkc
 
 	# SXC - Sexcoin - Generate Reward List
-	$(CC) $(FLAGS) list-jkc.cpp -o $(BINDIR)rewardlist-sxc
+	$(CC) $(FLAGS) list-sxc.cpp -o $(BINDIR)rewardlist-sxc
 
 
 	# NUG - Nuggets - Precompute all lucky hash cutouts

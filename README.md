@@ -6,29 +6,29 @@ cryptocurrencies with superblocks and/or variable reward blocks.
 
 Files:
 
-README.md - This file!
-TODO - To do list for Superblocks project
+* README.md - This file!
+* TODO - To do list for Superblocks project
 
-makefile - Makefile to create all these fun little programs
+* makefile - Makefile to create all these fun little programs
 
-test-next.sh - Test script to test these fun little programs
+* test-next.sh - Test script to test these fun little programs
 
-superblocks.cpp - main controller for Get Next Block Reward 
-superblocks.hpp - includes and Superblocks class
-utils.cpp - Mersenne Twister random, hex2long
+* superblocks.cpp - main controller for Get Next Block Reward 
+* superblocks.hpp - includes and Superblocks class
+* utils.cpp - Mersenne Twister random, hex2long
 
-next-gil.cpp - Get Next Block Reward for [GIL] Gil
-next-lky.cpp - Get Next Block Reward for [LKY] Luckycoin
-next-nug.cpp - Get Next Block Reward for [NUG] Nuggets
-next-spt.cpp - Get Next Block Reward for [SPT] Spots
+* next-gil.cpp - Get Next Block Reward for [GIL] Gil
+* next-lky.cpp - Get Next Block Reward for [LKY] Luckycoin
+* next-nug.cpp - Get Next Block Reward for [NUG] Nuggets
+* next-spt.cpp - Get Next Block Reward for [SPT] Spots
 
-list-jkc.cpp - Generate list of all superblocks for [JKC] Junkcoin
-list-sxc.cpp - Generate list of all superblocks for [SXC] Sexcoin
-rewardlists/rewardlist.jkc.txt - List of JKC superblocks up to block 100,000
-rewardlists/rewardlist.sxc.txt - List of SXC superblocks up to block 100,000
+* list-jkc.cpp - Generate list of all superblocks for [JKC] Junkcoin
+* list-sxc.cpp - Generate list of all superblocks for [SXC] Sexcoin
+* rewardlists/rewardlist.jkc.txt - List of JKC superblocks up to block 100,000
+* rewardlists/rewardlist.sxc.txt - List of SXC superblocks up to block 100,000
 
-precom-nug.cpp - Precompute lucky hash cut outs for [NUG] Nuggets
-precom-spt.cpp - Precompute lucky hash cut outs for [SPT] Spots
+* precom-nug.cpp - Precompute lucky hash cut outs for [NUG] Nuggets
+* precom-spt.cpp - Precompute lucky hash cut outs for [SPT] Spots
 
 
 Coins

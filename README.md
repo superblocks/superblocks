@@ -4,6 +4,8 @@ Superblocks - Version 0.4.2
 A collection of programs to determine the Next Block Reward for
 cryptocurrencies with superblocks and/or variable reward blocks.
 
+Discussions: https://bitcointalk.org/index.php?topic=264740.0
+
 Files:
 
 * README.md - This file!

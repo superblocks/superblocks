@@ -1,5 +1,5 @@
-Superblocks 0.4
-===============
+Superblocks - Version 0.4.2
+===========================
 
 A collection of programs to determine the Next Block Reward for
 cryptocurrencies with superblocks and/or variable reward blocks.
@@ -17,6 +17,7 @@ Files:
 * superblocks.hpp - includes and Superblocks class
 * utils.cpp - Mersenne Twister random, hex2long
 
+* next-elp.cpp - Get Next Block Reward for [ELP] Elephantcoin
 * next-gil.cpp - Get Next Block Reward for [GIL] Gil
 * next-lky.cpp - Get Next Block Reward for [LKY] Luckycoin
 * next-nug.cpp - Get Next Block Reward for [NUG] Nuggets
@@ -69,7 +70,7 @@ Donate? More Code? Donate! More Fun!
 * DMD: dJrkor1TjfZBuccKL1WorSWW5NYYucYQkA
 * ELP: e7Xxn4c3A2UwYUtVNrBSph45LP4SLCSf1w
 * GDC: g8Dyhc6UhvoKdeavVwr3FKR1UuM9tm4cfW
-* GIL: 78WWxherV8oUa79pVYXuV36VsYDobxJTU7  
+* GIL: 78WWxherV8oUa79pVYXuV36VsYDobxJTU7
 * GRW: GPHPcCWUpHTdP5Mp4CCEdvMbM99VzBvNe6
 * JNK: 7Xr7wox9CKGMPYHuWxsDyANHW3UkMgViUm
 * LKY: L1KpUBC5CudWjycbGyC713og1gTzP4o9qi
@@ -78,7 +79,7 @@ Donate? More Code? Donate! More Fun!
 * RED: Re4GFhN79S7nC3ZocqrZnocgpk5CJ5nf3E
 * SPT: MDLdRW5wLT29CH2rMEC4TRd2uCEpScjNZE
 * STR: sPgsGeSYaymrXnVMBhAxpq3372ZZriJ6Gs
-* SXC: S3PsEofPrcaf1UhteGBtGvtUTFL93CEYqm  
+* SXC: S3PsEofPrcaf1UhteGBtGvtUTFL93CEYqm
 * Hash160: 3BA9B9CCDFF4B1CC65AB2E9D095A8C6EB9E1E09F
 
 

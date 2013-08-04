@@ -1,11 +1,11 @@
 // Get Next Block Reward: [SPT] Spots
-// Superblocks - Version 0.4
+// Superblocks - Version 0.4.2
 
 #include "superblocks.hpp" 
 
 void Superblocks::init() {
 
-  coin = "SPT"; 
+	coin = "SPT"; 
 	coin_name = "Spots";
 
 	hash_length = 64;

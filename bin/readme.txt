@@ -1,1 +1,1 @@
-/bin - place your compiled binaries here!
+./bin/ - place your compiled binaries here!

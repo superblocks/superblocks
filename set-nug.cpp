@@ -1,5 +1,5 @@
 // Get Next Block Reward: [NUG] Nuggets
-// Superblocks - Version 0.4.2
+// Superblocks - Version 0.4.3
 
 #include "superblocks.hpp" 
 

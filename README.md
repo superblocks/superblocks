@@ -1,4 +1,4 @@
-Superblocks - Version 0.4.2
+Superblocks - Version 0.4.3
 ===========================
 
 A collection of programs to determine the Next Block Reward for
@@ -15,23 +15,27 @@ Files:
 
 * test-next.sh - Test script to test these fun little programs
 
-* superblocks.cpp - main controller for Get Next Block Reward 
-* superblocks.hpp - includes and Superblocks class
-* utils.cpp - Mersenne Twister random, hex2long
+* superblocks.hpp - Superblocks class and includes
+* utils.cpp - Mersenne Twister random, hex2long, etc
 
-* next-elp.cpp - Get Next Block Reward for [ELP] Elephantcoin
-* next-gil.cpp - Get Next Block Reward for [GIL] Gil
-* next-lky.cpp - Get Next Block Reward for [LKY] Luckycoin
-* next-nug.cpp - Get Next Block Reward for [NUG] Nuggets
-* next-spt.cpp - Get Next Block Reward for [SPT] Spots
+* next.cpp - Get Next Block Reward controller 
+* precom.cpp - Precompute lucky hash cutouts controller
+
+* set-cdc.cpp - Reward settings for [CDC] Cloudcoin 
+* set-elp.cpp - Reward settings for [ELP] Elephantcoin
+* set-gil.cpp - Reward settings for [GIL] Gil
+* set-grw.cpp - Reward settings for [GRW] Growthcoin 
+* set-lky.cpp - Reward settings for [LKY] Luckycoin
+* set-nug.cpp - Reward settings for [NUG] Nuggets
+* set-red.cpp - Reward settings for [RED] Redcoin   
+* set-spt.cpp - Reward settings for [SPT] Spots
+* set-str.cpp - Reward settings for [STR] Starcoin 
 
 * list-jkc.cpp - Generate list of all superblocks for [JKC] Junkcoin
 * list-sxc.cpp - Generate list of all superblocks for [SXC] Sexcoin
 * rewardlists/rewardlist.jkc.txt - List of JKC superblocks up to block 100,000
 * rewardlists/rewardlist.sxc.txt - List of SXC superblocks up to block 100,000
 
-* precom-nug.cpp - Precompute lucky hash cut outs for [NUG] Nuggets
-* precom-spt.cpp - Precompute lucky hash cut outs for [SPT] Spots
 
 
 Coins
@@ -41,21 +45,19 @@ Superblock Coins that seed with Block Height:
 * JNK - Junkcoin - https://github.com/Hartland/JKC
 * SXC - Sexcoin - https://github.com/sexcoin-project/sexcoin
 
-Superblock Coins that seed with the Previous Block Hash:
+Superblock/Variable Reward Coins that seed with the Previous Block Hash:
 * CDC - Cloudcoin - (no repo)
 * DMD - DiamondCoin - https://github.com/diamondcoinproject/diamondcoin
 * ELP - ElephantCoin - https://github.com/elephantcoin/elephantcoin
 * GDC - Grandcoin - https://github.com/grandcoin/grandcoin
+* GIL - Gil (variable) - https://github.com/hydroponica/gil  
 * GRW - Growthcoin - https://github.com/growthcoinproject/growthcoin
 * LKY - Luckycoin - https://github.com/LuckyCoinProject/Luckycoin
 * NUG - Nuggets - https://bitbucket.org/mytwobits/nuggets
 * PHS - Philosopherstone - https://github.com/philosopherstonecoin/philosopherstone
-* RED - Redcoin - https://github.com/redcoinproject/redcoin/
+* RED - Redcoin (+variable)- https://github.com/redcoinproject/redcoin/
 * SPT - Spots - https://github.com/spots-project/spots
 * STR - Starcoin - https://github.com/starcoinproject/starcoin
-
-Variable Reward Coins that seed with the Previous Block Hash:
-* GIL - Gil (variable) - https://github.com/hydroponica/gil  
 
 Coins that seed with Current Block Hash, or other methods:
 * ?

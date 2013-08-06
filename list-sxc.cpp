@@ -1,5 +1,5 @@
 // SXC superblocks list
-// Superblocks - Version 0.4.2
+// Superblocks - Version 0.4.3
 //
 // explorer: http://sexcoin.lavajumper.com:9950/
 

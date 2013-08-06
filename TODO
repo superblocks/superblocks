@@ -1,24 +1,20 @@
 TODO:
-Superblocks - Version 0.4.2
+Superblocks - Version 0.4.3
 
-* full test for: getnextblockreward for: ELP
+* precom: add support for multi steps
 
-* getnextblockreward for: CDC
-* getnextblockreward for: DMD
-* getnextblockreward for: GDC
-* getnextblockreward for: GIL
-* getnextblockreward for: PHS
-* getnextblockreward for: RED (+ secondary rand)
-* getnextblockreward for: STR
-* getnextblockreward for: JNK (+ getblockreward <height>)
-* getnextblockreward for: SXC (+ getblockreward <height>)
+* getnextblockreward: add support for secondary seed types
 
-* precompute lucky hash cut outs for: CDC
-* precompute lucky hash cut outs for: DMD
-* precompute lucky hash cut outs for: ELP
-* precompute lucky hash cut outs for: GDC
-* precompute lucky hash cut outs for: GIL
-* precompute lucky hash cut outs for: PHS
-* precompute lucky hash cut outs for: RED
-* precompute lucky hash cut outs for: STR
+* full superblock tests for: getnextblockreward for: ELP
+* full superblock tests for: getnextblockreward for: RED
+* full superblock tests for: getnextblockreward for: GDC
+* full superblock tests for: getnextblockreward for: GRW
+* full superblock tests for: getnextblockreward for: STR
+
+* reward settings for: DMD 
+* reward settings for: PHS 
+* reward settings for: JNK  + nheight
+* reward settings for: SXC  + nheight
+
+* getnextblockreward: add support subsidy cuts based on nHeight
 

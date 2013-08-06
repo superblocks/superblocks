@@ -1,11 +1,11 @@
 // Get Next Block Reward: [GIL] Gil
-// Superblocks - Version 0.4.2
+// Superblocks - Version 0.4.3
 
 #include "superblocks.hpp"
 
 void Superblocks::init() {
 
-        coin = "GIL";
+	coin = "GIL";
 	coin_name = "Gil";
 
 	hash_length = 64;

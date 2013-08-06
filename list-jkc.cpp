@@ -1,5 +1,5 @@
 // JKC superblocks list
-// Superblocks - Version 0.4.2
+// Superblocks - Version 0.4.3
 //
 // explorer: http://block.al.tcoin.info/chain/JKCCoin
 // explorer: http://jkc.cryptocoinexplorer.com/

@@ -1,5 +1,5 @@
 # makefile 
-# Superblocks - Version 0.4.2
+# Superblocks - Version 0.4.3
 
 CC=g++
 
@@ -10,34 +10,55 @@ BINDIR=./bin/
 #BINDIR=
 
 all:
-	# Superblocks
 
-	# Get Next Block Reward - ELP - Elephantcoin
-	$(CC) $(FLAGS) -DLUCK_STEPS=4 superblocks.cpp utils.cpp next-elp.cpp -o $(BINDIR)getnextblockreward-elp
+	# Coins that seed with previous Block Hash
 
-	# Get Next Block Reward - GIL - Gil
-	$(CC) $(FLAGS) -DLUCK_STEPS=42 superblocks.cpp utils.cpp next-gil.cpp -o $(BINDIR)getnextblockreward-gil
+	# [CDC] Cloudcoin 
+	$(CC) $(FLAGS) -DLUCK_STEPS=4 next.cpp utils.cpp set-cdc.cpp -o $(BINDIR)getnextblockreward-cdc
+	$(CC) $(FLAGS) -DLUCK_STEPS=4 precom.cpp utils.cpp set-cdc.cpp -o $(BINDIR)precompute-cdc
 
-	# Get Next Block Reward - LKY - Luckycoin
-	$(CC) $(FLAGS) -DLUCK_STEPS=4 superblocks.cpp utils.cpp next-lky.cpp -o $(BINDIR)getnextblockreward-lky
+	# [ELP] Elephantcoin
+	$(CC) $(FLAGS) -DLUCK_STEPS=4 next.cpp utils.cpp set-elp.cpp -o $(BINDIR)getnextblockreward-elp
+	$(CC) $(FLAGS) -DLUCK_STEPS=4 precom.cpp utils.cpp set-elp.cpp -o $(BINDIR)precompute-elp
 
-	# Get Next Block Reward - NUG - Nuggets
-	$(CC) $(FLAGS) -DLUCK_STEPS=2 superblocks.cpp utils.cpp next-nug.cpp -o $(BINDIR)getnextblockreward-nug
+	# [GDC] Grandcoin
+	$(CC) $(FLAGS) -DLUCK_STEPS=3 next.cpp utils.cpp set-gdc.cpp -o $(BINDIR)getnextblockreward-gdc
+	$(CC) $(FLAGS) -DLUCK_STEPS=3 precom.cpp utils.cpp set-gdc.cpp -o $(BINDIR)precompute-gdc
 
-	# Get Next Block Reward - SPT - Spots
-	$(CC) $(FLAGS) -DLUCK_STEPS=2 superblocks.cpp utils.cpp next-spt.cpp -o $(BINDIR)getnextblockreward-spt
+	# [GIL] Gil
+	$(CC) $(FLAGS) -DLUCK_STEPS=42 next.cpp utils.cpp set-gil.cpp -o $(BINDIR)getnextblockreward-gil
+	$(CC) $(FLAGS) -DLUCK_STEPS=42 precom.cpp utils.cpp set-gil.cpp -o $(BINDIR)precompute-gil
+
+	# [GRW] Growthcoin
+	$(CC) $(FLAGS) -DLUCK_STEPS=2 next.cpp utils.cpp set-grw.cpp -o $(BINDIR)getnextblockreward-grw
+	$(CC) $(FLAGS) -DLUCK_STEPS=2 precom.cpp utils.cpp set-grw.cpp -o $(BINDIR)precompute-grw
+
+	# [LKY] Luckycoin
+	$(CC) $(FLAGS) -DLUCK_STEPS=4 next.cpp utils.cpp set-lky.cpp -o $(BINDIR)getnextblockreward-lky
+	$(CC) $(FLAGS) -DLUCK_STEPS=4 precom.cpp utils.cpp set-lky.cpp -o $(BINDIR)precompute-lky
+
+	# [NUG] Nuggets
+	$(CC) $(FLAGS) -DLUCK_STEPS=2 next.cpp utils.cpp set-nug.cpp -o $(BINDIR)getnextblockreward-nug
+	$(CC) $(FLAGS) -DLUCK_STEPS=2 precom.cpp utils.cpp set-nug.cpp -o $(BINDIR)precompute-nug
+
+	# [RED] Redcoin
+	$(CC) $(FLAGS) -DLUCK_STEPS=2 next.cpp utils.cpp set-red.cpp -o $(BINDIR)getnextblockreward-red
+	$(CC) $(FLAGS) -DLUCK_STEPS=2 precom.cpp utils.cpp set-red.cpp -o $(BINDIR)precompute-red
+
+	# [SPT] Spots
+	$(CC) $(FLAGS) -DLUCK_STEPS=2 next.cpp utils.cpp set-spt.cpp -o $(BINDIR)getnextblockreward-spt
+	$(CC) $(FLAGS) -DLUCK_STEPS=2 precom.cpp utils.cpp set-spt.cpp -o $(BINDIR)precompute-spt
+
+	# [STR] Starcoin
+	$(CC) $(FLAGS) -DLUCK_STEPS=5 next.cpp utils.cpp set-str.cpp -o $(BINDIR)getnextblockreward-str
+	$(CC) $(FLAGS) -DLUCK_STEPS=5 precom.cpp utils.cpp set-str.cpp -o $(BINDIR)precompute-str
 
 
-	# Generate Reward List - JKC - Junkcoin
+	# Coins that seed with Block Height
+
+	# [JKC] Junkcoin
 	$(CC) $(FLAGS) list-jkc.cpp -o $(BINDIR)rewardlist-jkc
 
-	# Generate Reward List - SXC - Sexcoin
+	# [SXC] Sexcoin
 	$(CC) $(FLAGS) list-sxc.cpp -o $(BINDIR)rewardlist-sxc
-
-
-	# Precompute lucky hash cutouts - NUG - Nuggets
-	$(CC) $(FLAGS) precom-nug.cpp -o $(BINDIR)precompute-nug
-
-	# Precompute lucky hash cutouts - SPT - Nuggets
-	$(CC) $(FLAGS) precom-spt.cpp -o $(BINDIR)precompute-spt
 
